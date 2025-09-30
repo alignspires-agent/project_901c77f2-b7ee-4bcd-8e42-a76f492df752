@@ -1,0 +1,308 @@
+Lambda Execution Result (Latest Run):
+INIT_REPORT Init Duration: 9997.41 ms	Phase: init	Status: timeout
+
+=== Experiment Errors ===
+
+2025-09-30 03:59:42,930 - INFO - Starting LP Conformal Prediction Experiment on Time Series Data
+
+2025-09-30 03:59:42,930 - INFO - Generating synthetic time series data...
+
+2025-09-30 03:59:42,931 - INFO - Generating predictions and computing non-conformity scores...
+
+2025-09-30 03:59:42,934 - INFO - Testing different LP parameter combinations...
+
+2025-09-30 03:59:42,935 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.050
+
+2025-09-30 03:59:42,937 - INFO - ε=0.10, ρ=0.05: Coverage=0.960, Width=4.462
+
+2025-09-30 03:59:42,937 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.100
+
+/app/experiment.py:47: UserWarning: rho (0.1) >= 1 - beta (0.09331103678929764), quantile becomes trivial
+
+warnings.warn(f"rho ({rho}) >= 1 - beta ({1-beta}), quantile becomes trivial")
+
+2025-09-30 03:59:42,939 - INFO - ε=0.10, ρ=0.10: Coverage=1.000, Width=7.384
+
+2025-09-30 03:59:42,939 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.150
+
+/app/experiment.py:47: UserWarning: rho (0.15) >= 1 - beta (0.09314381270903005), quantile becomes trivial
+
+warnings.warn(f"rho ({rho}) >= 1 - beta ({1-beta}), quantile becomes trivial")
+
+2025-09-30 03:59:42,941 - INFO - ε=0.10, ρ=0.15: Coverage=1.000, Width=7.384
+
+2025-09-30 03:59:42,941 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.050
+
+2025-09-30 03:59:42,942 - INFO - ε=0.20, ρ=0.05: Coverage=0.960, Width=4.662
+
+2025-09-30 03:59:42,942 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.100
+
+2025-09-30 03:59:42,944 - INFO - ε=0.20, ρ=0.10: Coverage=1.000, Width=7.384
+
+2025-09-30 03:59:42,944 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.150
+
+2025-09-30 03:59:42,946 - INFO - ε=0.20, ρ=0.15: Coverage=1.000, Width=7.384
+
+2025-09-30 03:59:42,946 - INFO - Fitted LP conformal predictor with epsilon=0.500, rho=0.050
+
+2025-09-30 03:59:42,948 - INFO - ε=0.50, ρ=0.05: Coverage=0.985, Width=5.262
+
+2025-09-30 03:59:42,948 - INFO - Fitted LP conformal predictor with epsilon=0.500, rho=0.100
+
+2025-09-30 03:59:42,950 - INFO - ε=0.50, ρ=0.10: Coverage=1.000, Width=7.384
+
+2025-09-30 03:59:42,950 - INFO - Fitted LP conformal predictor with epsilon=0.500, rho=0.150
+
+2025-09-30 03:59:42,951 - INFO - ε=0.50, ρ=0.15: Coverage=1.000, Width=7.384
+
+2025-09-30 03:59:42,952 - INFO - Comparing with standard conformal prediction...
+
+2025-09-30 03:59:42,952 - INFO - Fitted LP conformal predictor with epsilon=0.000, rho=0.000
+
+2025-09-30 03:59:42,953 - INFO - 
+
+============================================================
+
+2025-09-30 03:59:42,953 - INFO - FINAL EXPERIMENT RESULTS
+
+2025-09-30 03:59:42,953 - INFO - ============================================================
+
+2025-09-30 03:59:42,953 - INFO - Standard Conformal Prediction (ε=0, ρ=0):
+
+2025-09-30 03:59:42,953 - INFO -   Coverage: 0.910 (Target: 0.900)
+
+2025-09-30 03:59:42,953 - INFO -   Average Interval Width: 3.512
+
+2025-09-30 03:59:42,953 - INFO - 
+
+LP Robust Conformal Prediction Results:
+
+2025-09-30 03:59:42,953 - INFO - ε	ρ	Coverage	Width		Improvement
+
+2025-09-30 03:59:42,953 - INFO - --------------------------------------------------
+
+2025-09-30 03:59:42,953 - INFO - 0.1	0.05	0.960		4.462		+0.050
+
+2025-09-30 03:59:42,953 - INFO - 0.1	0.10	1.000		7.384		+0.090
+
+2025-09-30 03:59:42,953 - INFO - 0.1	0.15	1.000		7.384		+0.090
+
+2025-09-30 03:59:42,953 - INFO - 0.2	0.05	0.960		4.662		+0.050
+
+2025-09-30 03:59:42,953 - INFO - 0.2	0.10	1.000		7.384		+0.090
+
+2025-09-30 03:59:42,953 - INFO - 0.2	0.15	1.000		7.384		+0.090
+
+2025-09-30 03:59:42,953 - INFO - 0.5	0.05	0.985		5.262		+0.075
+
+2025-09-30 03:59:42,954 - INFO - 0.5	0.10	1.000		7.384		+0.090
+
+2025-09-30 03:59:42,954 - INFO - 0.5	0.15	1.000		7.384		+0.090
+
+2025-09-30 03:59:42,954 - INFO - 
+
+SUMMARY:
+
+2025-09-30 03:59:42,954 - INFO - Best configuration: ε=0.1, ρ=0.1
+
+2025-09-30 03:59:42,954 - INFO - Best coverage achieved: 1.000
+
+2025-09-30 03:59:42,954 - INFO - Target coverage: 0.900
+
+2025-09-30 03:59:42,954 - INFO - ✓ LP-based method provides improved robustness to distribution shifts
+
+2025-09-30 03:59:42,954 - INFO - 
+
+CONCRETE RESULTS:
+
+2025-09-30 03:59:42,954 - INFO - standard_coverage: 0.9095
+
+2025-09-30 03:59:42,954 - INFO - standard_width: 3.5118
+
+2025-09-30 03:59:42,954 - INFO - best_lp_coverage: 1.0
+
+2025-09-30 03:59:42,954 - INFO - best_lp_config: ε=0.1, ρ=0.1
+
+2025-09-30 03:59:42,954 - INFO - coverage_improvement: 0.0905
+
+2025-09-30 03:59:42,954 - INFO - target_coverage: 0.9
+
+{
+
+"experimentStatusCode": 200,
+
+"body": {
+
+"message": "Experiment completed successfully",
+
+"returncode": 0,
+
+"stdout": "",
+
+"stderr": "2025-09-30 03:59:42,930 - INFO - Starting LP Conformal Prediction Experiment on Time Series Data\n2025-09-30 03:59:42,930 - INFO - Generating synthetic time series data...\n2025-09-30 03:59:42,931 - INFO - Generating predictions and computing non-conformity scores...\n2025-09-30 03:59:42,934 - INFO - Testing different LP parameter combinations...\n2025-09-30 03:59:42,935 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.050\n2025-09-30 03:59:42,937 - INFO - \u03b5=0.10, \u03c1=0.05: Coverage=0.960, Width=4.462\n2025-09-30 03:59:42,937 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.100\n/app/experiment.py:47: UserWarning: rho (0.1) >= 1 - beta (0.09331103678929764), quantile becomes trivial\n  warnings.warn(f\"rho ({rho}) >= 1 - beta ({1-beta}), quantile becomes trivial\")\n2025-09-30 03:59:42,939 - INFO - \u03b5=0.10, \u03c1=0.10: Coverage=1.000, Width=7.384\n2025-09-30 03:59:42,939 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.150\n/app/experiment.py:47: UserWarning: rho (0.15) >= 1 - beta (0.09314381270903005), quantile becomes trivial\n  warnings.warn(f\"rho ({rho}) >= 1 - beta ({1-beta}), quantile becomes trivial\")\n2025-09-30 03:59:42,941 - INFO - \u03b5=0.10, \u03c1=0.15: Coverage=1.000, Width=7.384\n2025-09-30 03:59:42,941 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.050\n2025-09-30 03:59:42,942 - INFO - \u03b5=0.20, \u03c1=0.05: Coverage=0.960, Width=4.662\n2025-09-30 03:59:42,942 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.100\n2025-09-30 03:59:42,944 - INFO - \u03b5=0.20, \u03c1=0.10: Coverage=1.000, Width=7.384\n2025-09-30 03:59:42,944 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.150\n2025-09-30 03:59:42,946 - INFO - \u03b5=0.20, \u03c1=0.15: Coverage=1.000, Width=7.384\n2025-09-30 03:59:42,946 - INFO - Fitted LP conformal predictor with epsilon=0.500, rho=0.050\n2025-09-30 03:59:42,948 - INFO - \u03b5=0.50, \u03c1=0.05: Coverage=0.985, Width=5.262\n2025-09-30 03:59:42,948 - INFO - Fitted LP conformal predictor with epsilon=0.500, rho=0.100\n2025-09-30 03:59:42,950 - INFO - \u03b5=0.50, \u03c1=0.10: Coverage=1.000, Width=7.384\n2025-09-30 03:59:42,950 - INFO - Fitted LP conformal predictor with epsilon=0.500, rho=0.150\n2025-09-30 03:59:42,951 - INFO - \u03b5=0.50, \u03c1=0.15: Coverage=1.000, Width=7.384\n2025-09-30 03:59:42,952 - INFO - Comparing with standard conformal prediction...\n2025-09-30 03:59:42,952 - INFO - Fitted LP conformal predictor with epsilon=0.000, rho=0.000\n2025-09-30 03:59:42,953 - INFO - \n============================================================\n2025-09-30 03:59:42,953 - INFO - FINAL EXPERIMENT RESULTS\n2025-09-30 03:59:42,953 - INFO - ============================================================\n2025-09-30 03:59:42,953 - INFO - Standard Conformal Prediction (\u03b5=0, \u03c1=0):\n2025-09-30 03:59:42,953 - INFO -   Coverage: 0.910 (Target: 0.900)\n2025-09-30 03:59:42,953 - INFO -   Average Interval Width: 3.512\n2025-09-30 03:59:42,953 - INFO - \nLP Robust Conformal Prediction Results:\n2025-09-30 03:59:42,953 - INFO - \u03b5\t\u03c1\tCoverage\tWidth\t\tImprovement\n2025-09-30 03:59:42,953 - INFO - --------------------------------------------------\n2025-09-30 03:59:42,953 - INFO - 0.1\t0.05\t0.960\t\t4.462\t\t+0.050\n2025-09-30 03:59:42,953 - INFO - 0.1\t0.10\t1.000\t\t7.384\t\t+0.090\n2025-09-30 03:59:42,953 - INFO - 0.1\t0.15\t1.000\t\t7.384\t\t+0.090\n2025-09-30 03:59:42,953 - INFO - 0.2\t0.05\t0.960\t\t4.662\t\t+0.050\n2025-09-30 03:59:42,953 - INFO - 0.2\t0.10\t1.000\t\t7.384\t\t+0.090\n2025-09-30 03:59:42,953 - INFO - 0.2\t0.15\t1.000\t\t7.384\t\t+0.090\n2025-09-30 03:59:42,953 - INFO - 0.5\t0.05\t0.985\t\t5.262\t\t+0.075\n2025-09-30 03:59:42,954 - INFO - 0.5\t0.10\t1.000\t\t7.384\t\t+0.090\n2025-09-30 03:59:42,954 - INFO - 0.5\t0.15\t1.000\t\t7.384\t\t+0.090\n2025-09-30 03:59:42,954 - INFO - \nSUMMARY:\n2025-09-30 03:59:42,954 - INFO - Best configuration: \u03b5=0.1, \u03c1=0.1\n2025-09-30 03:59:42,954 - INFO - Best coverage achieved: 1.000\n2025-09-30 03:59:42,954 - INFO - Target coverage: 0.900\n2025-09-30 03:59:42,954 - INFO - \u2713 LP-based method provides improved robustness to distribution shifts\n2025-09-30 03:59:42,954 - INFO - \nCONCRETE RESULTS:\n2025-09-30 03:59:42,954 - INFO - standard_coverage: 0.9095\n2025-09-30 03:59:42,954 - INFO - standard_width: 3.5118\n2025-09-30 03:59:42,954 - INFO - best_lp_coverage: 1.0\n2025-09-30 03:59:42,954 - INFO - best_lp_config: \u03b5=0.1, \u03c1=0.1\n2025-09-30 03:59:42,954 - INFO - coverage_improvement: 0.0905\n2025-09-30 03:59:42,954 - INFO - target_coverage: 0.9\n",
+
+"execution_time": null
+
+}
+
+}
+
+INIT_REPORT Init Duration: 6732.91 ms	Phase: invoke	Status: error	Error Type: Runtime.ExitError
+
+START RequestId: 3653bfb9-28ab-4a70-b331-9cfeb527bf2b Version: $LATEST
+
+RequestId: 3653bfb9-28ab-4a70-b331-9cfeb527bf2b Error: Runtime exited without providing a reason
+Runtime.ExitError
+
+END RequestId: 3653bfb9-28ab-4a70-b331-9cfeb527bf2b
+
+REPORT RequestId: 3653bfb9-28ab-4a70-b331-9cfeb527bf2b	Duration: 6734.12 ms	Billed Duration: 6735 ms	Memory Size: 3008 MB	Max Memory Used: 92 MB	
+
+=== Experiment Errors ===
+
+2025-09-30 03:59:43,876 - INFO - Starting LP Conformal Prediction Experiment on Time Series Data
+
+2025-09-30 03:59:43,876 - INFO - Generating synthetic time series data...
+
+2025-09-30 03:59:43,877 - INFO - Generating predictions and computing non-conformity scores...
+
+2025-09-30 03:59:43,880 - INFO - Testing different LP parameter combinations...
+
+2025-09-30 03:59:43,881 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.050
+
+2025-09-30 03:59:43,882 - INFO - ε=0.10, ρ=0.05: Coverage=0.960, Width=4.462
+
+2025-09-30 03:59:43,882 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.100
+
+/app/experiment.py:47: UserWarning: rho (0.1) >= 1 - beta (0.09331103678929764), quantile becomes trivial
+
+warnings.warn(f"rho ({rho}) >= 1 - beta ({1-beta}), quantile becomes trivial")
+
+2025-09-30 03:59:43,884 - INFO - ε=0.10, ρ=0.10: Coverage=1.000, Width=7.384
+
+2025-09-30 03:59:43,884 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.150
+
+/app/experiment.py:47: UserWarning: rho (0.15) >= 1 - beta (0.09314381270903005), quantile becomes trivial
+
+warnings.warn(f"rho ({rho}) >= 1 - beta ({1-beta}), quantile becomes trivial")
+
+2025-09-30 03:59:43,886 - INFO - ε=0.10, ρ=0.15: Coverage=1.000, Width=7.384
+
+2025-09-30 03:59:43,886 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.050
+
+2025-09-30 03:59:43,888 - INFO - ε=0.20, ρ=0.05: Coverage=0.960, Width=4.662
+
+2025-09-30 03:59:43,888 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.100
+
+2025-09-30 03:59:43,890 - INFO - ε=0.20, ρ=0.10: Coverage=1.000, Width=7.384
+
+2025-09-30 03:59:43,890 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.150
+
+2025-09-30 03:59:43,892 - INFO - ε=0.20, ρ=0.15: Coverage=1.000, Width=7.384
+
+2025-09-30 03:59:43,892 - INFO - Fitted LP conformal predictor with epsilon=0.500, rho=0.050
+
+2025-09-30 03:59:43,893 - INFO - ε=0.50, ρ=0.05: Coverage=0.985, Width=5.262
+
+2025-09-30 03:59:43,893 - INFO - Fitted LP conformal predictor with epsilon=0.500, rho=0.100
+
+2025-09-30 03:59:43,895 - INFO - ε=0.50, ρ=0.10: Coverage=1.000, Width=7.384
+
+2025-09-30 03:59:43,895 - INFO - Fitted LP conformal predictor with epsilon=0.500, rho=0.150
+
+2025-09-30 03:59:43,897 - INFO - ε=0.50, ρ=0.15: Coverage=1.000, Width=7.384
+
+2025-09-30 03:59:43,897 - INFO - Comparing with standard conformal prediction...
+
+2025-09-30 03:59:43,897 - INFO - Fitted LP conformal predictor with epsilon=0.000, rho=0.000
+
+2025-09-30 03:59:43,898 - INFO - 
+
+============================================================
+
+2025-09-30 03:59:43,898 - INFO - FINAL EXPERIMENT RESULTS
+
+2025-09-30 03:59:43,898 - INFO - ============================================================
+
+2025-09-30 03:59:43,899 - INFO - Standard Conformal Prediction (ε=0, ρ=0):
+
+2025-09-30 03:59:43,899 - INFO -   Coverage: 0.910 (Target: 0.900)
+
+2025-09-30 03:59:43,899 - INFO -   Average Interval Width: 3.512
+
+2025-09-30 03:59:43,899 - INFO - 
+
+LP Robust Conformal Prediction Results:
+
+2025-09-30 03:59:43,899 - INFO - ε	ρ	Coverage	Width		Improvement
+
+2025-09-30 03:59:43,899 - INFO - --------------------------------------------------
+
+2025-09-30 03:59:43,899 - INFO - 0.1	0.05	0.960		4.462		+0.050
+
+2025-09-30 03:59:43,899 - INFO - 0.1	0.10	1.000		7.384		+0.090
+
+2025-09-30 03:59:43,899 - INFO - 0.1	0.15	1.000		7.384		+0.090
+
+2025-09-30 03:59:43,899 - INFO - 0.2	0.05	0.960		4.662		+0.050
+
+2025-09-30 03:59:43,899 - INFO - 0.2	0.10	1.000		7.384		+0.090
+
+2025-09-30 03:59:43,899 - INFO - 0.2	0.15	1.000		7.384		+0.090
+
+2025-09-30 03:59:43,899 - INFO - 0.5	0.05	0.985		5.262		+0.075
+
+2025-09-30 03:59:43,899 - INFO - 0.5	0.10	1.000		7.384		+0.090
+
+2025-09-30 03:59:43,899 - INFO - 0.5	0.15	1.000		7.384		+0.090
+
+2025-09-30 03:59:43,899 - INFO - 
+
+SUMMARY:
+
+2025-09-30 03:59:43,899 - INFO - Best configuration: ε=0.1, ρ=0.1
+
+2025-09-30 03:59:43,899 - INFO - Best coverage achieved: 1.000
+
+2025-09-30 03:59:43,899 - INFO - Target coverage: 0.900
+
+2025-09-30 03:59:43,899 - INFO - ✓ LP-based method provides improved robustness to distribution shifts
+
+2025-09-30 03:59:43,899 - INFO - 
+
+CONCRETE RESULTS:
+
+2025-09-30 03:59:43,899 - INFO - standard_coverage: 0.9095
+
+2025-09-30 03:59:43,899 - INFO - standard_width: 3.5118
+
+2025-09-30 03:59:43,899 - INFO - best_lp_coverage: 1.0
+
+2025-09-30 03:59:43,899 - INFO - best_lp_config: ε=0.1, ρ=0.1
+
+2025-09-30 03:59:43,899 - INFO - coverage_improvement: 0.0905
+
+2025-09-30 03:59:43,899 - INFO - target_coverage: 0.9
+
+{
+
+"experimentStatusCode": 200,
+
+"body": {
+
+"message": "Experiment completed successfully",
+
+"returncode": 0,
+
+"stdout": "",
+
+"stderr": "2025-09-30 03:59:43,876 - INFO - Starting LP Conformal Prediction Experiment on Time Series Data\n2025-09-30 03:59:43,876 - INFO - Generating synthetic time series data...\n2025-09-30 03:59:43,877 - INFO - Generating predictions and computing non-conformity scores...\n2025-09-30 03:59:43,880 - INFO - Testing different LP parameter combinations...\n2025-09-30 03:59:43,881 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.050\n2025-09-30 03:59:43,882 - INFO - \u03b5=0.10, \u03c1=0.05: Coverage=0.960, Width=4.462\n2025-09-30 03:59:43,882 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.100\n/app/experiment.py:47: UserWarning: rho (0.1) >= 1 - beta (0.09331103678929764), quantile becomes trivial\n  warnings.warn(f\"rho ({rho}) >= 1 - beta ({1-beta}), quantile becomes trivial\")\n2025-09-30 03:59:43,884 - INFO - \u03b5=0.10, \u03c1=0.10: Coverage=1.000, Width=7.384\n2025-09-30 03:59:43,884 - INFO - Fitted LP conformal predictor with epsilon=0.100, rho=0.150\n/app/experiment.py:47: UserWarning: rho (0.15) >= 1 - beta (0.09314381270903005), quantile becomes trivial\n  warnings.warn(f\"rho ({rho}) >= 1 - beta ({1-beta}), quantile becomes trivial\")\n2025-09-30 03:59:43,886 - INFO - \u03b5=0.10, \u03c1=0.15: Coverage=1.000, Width=7.384\n2025-09-30 03:59:43,886 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.050\n2025-09-30 03:59:43,888 - INFO - \u03b5=0.20, \u03c1=0.05: Coverage=0.960, Width=4.662\n2025-09-30 03:59:43,888 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.100\n2025-09-30 03:59:43,890 - INFO - \u03b5=0.20, \u03c1=0.10: Coverage=1.000, Width=7.384\n2025-09-30 03:59:43,890 - INFO - Fitted LP conformal predictor with epsilon=0.200, rho=0.150\n2025-09-30 03:59:43,892 - INFO - \u03b5=0.20, \u03c1=0.15: Coverage=1.000, Width=7.384\n2025-09-30 03:59:43,892 - INFO - Fitted LP conformal predictor with epsilon=0.500, rho=0.050\n2025-09-30 03:59:43,893 - INFO - \u03b5=0.50, \u03c1=0.05: Coverage=0.985, Width=5.262\n2025-09-30 03:59:43,893 - INFO - Fitted LP conformal predictor with epsilon=0.500, rho=0.100\n2025-09-30 03:59:43,895 - INFO - \u03b5=0.50, \u03c1=0.10: Coverage=1.000, Width=7.384\n2025-09-30 03:59:43,895 - INFO - Fitted LP conformal predictor with epsilon=0.500, rho=0.150\n2025-09-30 03:59:43,897 - INFO - \u03b5=0.50, \u03c1=0.15: Coverage=1.000, Width=7.384\n2025-09-30 03:59:43,897 - INFO - Comparing with standard conformal prediction...\n2025-09-30 03:59:43,897 - INFO - Fitted LP conformal predictor with epsilon=0.000, rho=0.000\n2025-09-30 03:59:43,898 - INFO - \n============================================================\n2025-09-30 03:59:43,898 - INFO - FINAL EXPERIMENT RESULTS\n2025-09-30 03:59:43,898 - INFO - ============================================================\n2025-09-30 03:59:43,899 - INFO - Standard Conformal Prediction (\u03b5=0, \u03c1=0):\n2025-09-30 03:59:43,899 - INFO -   Coverage: 0.910 (Target: 0.900)\n2025-09-30 03:59:43,899 - INFO -   Average Interval Width: 3.512\n2025-09-30 03:59:43,899 - INFO - \nLP Robust Conformal Prediction Results:\n2025-09-30 03:59:43,899 - INFO - \u03b5\t\u03c1\tCoverage\tWidth\t\tImprovement\n2025-09-30 03:59:43,899 - INFO - --------------------------------------------------\n2025-09-30 03:59:43,899 - INFO - 0.1\t0.05\t0.960\t\t4.462\t\t+0.050\n2025-09-30 03:59:43,899 - INFO - 0.1\t0.10\t1.000\t\t7.384\t\t+0.090\n2025-09-30 03:59:43,899 - INFO - 0.1\t0.15\t1.000\t\t7.384\t\t+0.090\n2025-09-30 03:59:43,899 - INFO - 0.2\t0.05\t0.960\t\t4.662\t\t+0.050\n2025-09-30 03:59:43,899 - INFO - 0.2\t0.10\t1.000\t\t7.384\t\t+0.090\n2025-09-30 03:59:43,899 - INFO - 0.2\t0.15\t1.000\t\t7.384\t\t+0.090\n2025-09-30 03:59:43,899 - INFO - 0.5\t0.05\t0.985\t\t5.262\t\t+0.075\n2025-09-30 03:59:43,899 - INFO - 0.5\t0.10\t1.000\t\t7.384\t\t+0.090\n2025-09-30 03:59:43,899 - INFO - 0.5\t0.15\t1.000\t\t7.384\t\t+0.090\n2025-09-30 03:59:43,899 - INFO - \nSUMMARY:\n2025-09-30 03:59:43,899 - INFO - Best configuration: \u03b5=0.1, \u03c1=0.1\n2025-09-30 03:59:43,899 - INFO - Best coverage achieved: 1.000\n2025-09-30 03:59:43,899 - INFO - Target coverage: 0.900\n2025-09-30 03:59:43,899 - INFO - \u2713 LP-based method provides improved robustness to distribution shifts\n2025-09-30 03:59:43,899 - INFO - \nCONCRETE RESULTS:\n2025-09-30 03:59:43,899 - INFO - standard_coverage: 0.9095\n2025-09-30 03:59:43,899 - INFO - standard_width: 3.5118\n2025-09-30 03:59:43,899 - INFO - best_lp_coverage: 1.0\n2025-09-30 03:59:43,899 - INFO - best_lp_config: \u03b5=0.1, \u03c1=0.1\n2025-09-30 03:59:43,899 - INFO - coverage_improvement: 0.0905\n2025-09-30 03:59:43,899 - INFO - target_coverage: 0.9\n",
+
+"execution_time": null
+
+}
+
+}
+
+INIT_REPORT Init Duration: 910.83 ms	Phase: init	Status: error	Error Type: Runtime.ExitError
+
